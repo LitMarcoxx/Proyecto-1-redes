@@ -1,0 +1,91 @@
+services:
+  dns-api:
+    build:
+      context: ./dns-api
+      dockerfile: docker/Dockerfile
+    image: dns-api:latest
+    container_name: dns-api
+    ports:
+      - "8080:8080"
+    environment:
+      - UPSTREAM_DNS=8.8.8.8
+      - DEFAULT_TIMEOUT_MS=2000
+      - PORT=8080
+      - FIREBASE_CRED_JSON=${FIREBASE_CRED_JSON}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - dns-network
+
+  dns-interceptor:
+    build:
+      context: ./dns-interceptor
+      dockerfile: docker/Dockerfile
+    image: dns-interceptor:latest
+    container_name: dns-interceptor
+    ports:
+      - "53:53/udp"
+    environment:
+      - DNS_API_URL=http://dns-api:8080
+    depends_on:
+      dns-api:
+        condition: service_healthy
+    restart: unless-stopped
+    privileged: true
+    cap_add:
+      - NET_BIND_SERVICE
+      - NET_ADMIN
+      - NET_RAW
+    networks:
+      - dns-network
+
+  dns-ui:
+    build:
+      context: ./dns-ui
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:8080
+    image: dns-ui:latest
+    container_name: dns-ui
+    ports:
+      - "8081:80"
+    depends_on:
+      dns-api:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - dns-network
+
+  dns-healthchecker:
+    build:
+      context: ./dns-healthchecker
+      dockerfile: Dockerfile
+    image: dns-healthchecker:latest
+    container_name: dns-healthchecker
+    depends_on:
+      dns-api:
+        condition: service_healthy
+    environment:
+      # Firebase credentials
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - FIREBASE_CRED_JSON=${FIREBASE_CRED_JSON}
+
+      # Intervalo entre chequeos
+      - CHECK_INTERVAL=30
+
+      # (Opcional) región simulada (por si corrés varios)
+      # - SIMULATED_REGION=na
+    restart: unless-stopped
+    networks:
+      - dns-network
+
+networks:
+  dns-network:
+    driver: bridge
+    name: dns-stack-network

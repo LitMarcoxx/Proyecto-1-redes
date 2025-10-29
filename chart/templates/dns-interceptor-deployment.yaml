@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "dns-project.fullname" . }}-interceptor
+  labels:
+    app: dns-interceptor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dns-interceptor
+  template:
+    metadata:
+      labels:
+        app: dns-interceptor
+    spec:
+      containers:
+        - name: dns-interceptor
+          image: "dns-interceptor:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 53
+              protocol: UDP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 64Mi

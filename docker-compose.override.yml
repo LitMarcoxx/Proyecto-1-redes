@@ -1,0 +1,20 @@
+services:
+  dns-ui:
+    # override to run UI in development mode (vite) with hot-reload inside container
+    build:
+      context: ./dns-ui
+      dockerfile: Dockerfile.dev
+    image: dns-ui-dev:latest
+    container_name: dns-ui-dev
+    working_dir: /app
+    environment:
+      VITE_API_URL: "http://localhost:8080"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./dns-ui:/app:cached
+      - /app/node_modules
+    depends_on:
+      - dns-api
+    networks:
+      - dns-network

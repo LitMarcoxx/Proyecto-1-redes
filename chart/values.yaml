@@ -1,0 +1,34 @@
+api:
+  image:
+    repository: dns-api
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  replicas: 1
+
+  envFile: ../dns-api/.env
+
+  service:
+    type: NodePort
+    port: 8080
+    nodePort: 30080
+
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
+interceptor:
+  image:
+    repository: dns-interceptor
+    tag: latest
+    pullPolicy: IfNotPresent
+
+
+dnsUi:
+  image: dns-ui:latest
+  replicas: 1
+  service:
+    nodePort: 30881

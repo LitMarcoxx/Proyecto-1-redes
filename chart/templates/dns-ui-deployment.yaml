@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dns-ui
+  labels:
+    app: dns-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dns-ui
+  template:
+    metadata:
+      labels:
+        app: dns-ui
+    spec:
+      containers:
+        - name: dns-ui
+          image: dns-ui:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+            requests:
+              cpu: "100m"
+              memory: "128Mi"

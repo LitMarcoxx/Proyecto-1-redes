@@ -1,0 +1,7 @@
+{
+  "targets": [
+    {"id": "us-east", "ip": "192.0.2.1", "geo_location": {"country": "ZZ", "region": "unknown"}},
+    {"id": "eu-west", "ip": "198.51.100.1", "geo_location": {"country": "ZZ", "region": "unknown"}},
+    {"id": "asia-pacific", "ip": "203.0.113.1", "geo_location": {"country": "ZZ", "region": "unknown"}}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "targets": [
+    {"id": "multi-1", "ip": "192.0.2.1", "geo_location": {"country": "ZZ", "region": "unknown"}},
+    {"id": "multi-2", "ip": "192.0.2.2", "geo_location": {"country": "ZZ", "region": "unknown"}},
+    {"id": "multi-3", "ip": "192.0.2.3", "geo_location": {"country": "ZZ", "region": "unknown"}}
+  ]
+}

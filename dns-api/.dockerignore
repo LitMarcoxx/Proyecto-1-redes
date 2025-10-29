@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+venv
+.envrc
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+*.sqlite3
+node_modules
+bin
+build
+dist

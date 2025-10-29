@@ -1,0 +1,961 @@
+{
+  "geo.example.com": {
+    "type": "single",
+    "ttl": 300,
+    "fqdn": "geo.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.1",
+        "id": "us-east"
+      }
+    ],
+    "health": {
+      "eu-west": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 122.0,
+            "na": 44.0,
+            "ca": 93.0,
+            "sa": 129.0,
+            "eu": 134.0
+          },
+          "last_ms": 129.0
+        },
+        "last_check": "2025-10-18T05:31:59Z",
+        "status": "healthy"
+      },
+      "us-east": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 105.0,
+            "na": 72.0,
+            "sa": 109.0,
+            "ca": 40.0,
+            "eu": 81.0
+          },
+          "last_ms": 105.0
+        },
+        "last_check": "2025-10-19T19:55:49Z",
+        "status": "healthy"
+      },
+      "asia-pacific": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 109.0,
+            "na": 43.0,
+            "ca": 99.0,
+            "sa": 163.0,
+            "eu": 103.0
+          },
+          "last_ms": 163.0
+        },
+        "last_check": "2025-10-18T05:32:01Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 81.0
+          },
+          "last_ms": 81.0
+        },
+        "last_check": "2025-10-19T19:55:05Z",
+        "status": "healthy"
+      },
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 105.0
+          },
+          "last_ms": 105.0
+        },
+        "last_check": "2025-10-19T19:55:49Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 72.0
+          },
+          "last_ms": 72.0
+        },
+        "last_check": "2025-10-19T19:54:51Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 109.0
+          },
+          "last_ms": 109.0
+        },
+        "last_check": "2025-10-19T19:55:20Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 40.0
+          },
+          "last_ms": 40.0
+        },
+        "last_check": "2025-10-19T19:55:34Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "geocheck.example.com": {
+    "type": "geo",
+    "ttl": 60,
+    "fqdn": "geocheck.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "198.135.126.20",
+        "id": "t1"
+      },
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "198.145.67.50",
+        "id": "t2"
+      }
+    ],
+    "health": {
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 162.0
+          },
+          "last_ms": 162.0
+        },
+        "last_check": "2025-10-19T19:55:51Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 36.0
+          },
+          "last_ms": 36.0
+        },
+        "last_check": "2025-10-19T19:54:53Z",
+        "status": "healthy"
+      },
+      "t1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 154.0,
+            "na": 48.0,
+            "sa": 138.0,
+            "ca": 52.0,
+            "eu": 100.0
+          },
+          "last_ms": 154.0
+        },
+        "last_check": "2025-10-19T19:55:50Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 136.0
+          },
+          "last_ms": 136.0
+        },
+        "last_check": "2025-10-19T19:55:22Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 60.0
+          },
+          "last_ms": 60.0
+        },
+        "last_check": "2025-10-19T19:55:37Z",
+        "status": "healthy"
+      },
+      "t2": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 162.0,
+            "na": 36.0,
+            "sa": 136.0,
+            "ca": 60.0,
+            "eu": 143.0
+          },
+          "last_ms": 162.0
+        },
+        "last_check": "2025-10-19T19:55:51Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 143.0
+          },
+          "last_ms": 143.0
+        },
+        "last_check": "2025-10-19T19:55:08Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "multi.example.com": {
+    "type": "single",
+    "ttl": 300,
+    "fqdn": "multi.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.1",
+        "id": "t1"
+      }
+    ],
+    "health": {
+      "t2": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 149.0,
+            "na": 20.0,
+            "ca": 91.0,
+            "sa": 145.0,
+            "eu": 106.0
+          },
+          "last_ms": 145.0
+        },
+        "last_check": "2025-10-18T05:32:03Z",
+        "status": "healthy"
+      },
+      "t3": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 135.0,
+            "na": 24.0,
+            "ca": 90.0,
+            "sa": 146.0,
+            "eu": 95.0
+          },
+          "last_ms": 146.0
+        },
+        "last_check": "2025-10-18T05:32:04Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 141.0
+          },
+          "last_ms": 141.0
+        },
+        "last_check": "2025-10-19T19:55:09Z",
+        "status": "healthy"
+      },
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 125.0
+          },
+          "last_ms": 125.0
+        },
+        "last_check": "2025-10-19T19:55:53Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 44.0
+          },
+          "last_ms": 44.0
+        },
+        "last_check": "2025-10-19T19:54:55Z",
+        "status": "healthy"
+      },
+      "t1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 125.0,
+            "na": 44.0,
+            "sa": 153.0,
+            "ca": 50.0,
+            "eu": 141.0
+          },
+          "last_ms": 125.0
+        },
+        "last_check": "2025-10-19T19:55:53Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 153.0
+          },
+          "last_ms": 153.0
+        },
+        "last_check": "2025-10-19T19:55:24Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 50.0
+          },
+          "last_ms": 50.0
+        },
+        "last_check": "2025-10-19T19:55:38Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "roundtrip.example.com": {
+    "type": "single",
+    "fqdn": "roundtrip.example.com",
+    "ttl": 300,
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.1",
+        "id": "rt-1"
+      }
+    ],
+    "health": {
+      "rt-3": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 169.0,
+            "na": 76.0,
+            "ca": 71.0,
+            "sa": 170.0,
+            "eu": 82.0
+          },
+          "last_ms": 170.0
+        },
+        "last_check": "2025-10-18T05:32:08Z",
+        "status": "healthy"
+      },
+      "rt-2": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 183.0,
+            "na": 21.0,
+            "ca": 59.0,
+            "sa": 125.0,
+            "eu": 86.0
+          },
+          "last_ms": 125.0
+        },
+        "last_check": "2025-10-18T05:32:07Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 88.0
+          },
+          "last_ms": 88.0
+        },
+        "last_check": "2025-10-19T19:55:10Z",
+        "status": "healthy"
+      },
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 142.0
+          },
+          "last_ms": 142.0
+        },
+        "last_check": "2025-10-19T19:55:54Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 75.0
+          },
+          "last_ms": 75.0
+        },
+        "last_check": "2025-10-19T19:54:56Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 170.0
+          },
+          "last_ms": 170.0
+        },
+        "last_check": "2025-10-19T19:55:25Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 61.0
+          },
+          "last_ms": 61.0
+        },
+        "last_check": "2025-10-19T19:55:39Z",
+        "status": "healthy"
+      },
+      "rt-1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 142.0,
+            "na": 75.0,
+            "sa": 170.0,
+            "ca": 61.0,
+            "eu": 88.0
+          },
+          "last_ms": 142.0
+        },
+        "last_check": "2025-10-19T19:55:54Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "roundtripcheck.example.com": {
+    "type": "roundtrip",
+    "ttl": 40,
+    "fqdn": "roundtripcheck.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "198.135.127.70",
+        "id": "t1"
+      },
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "198.137.82.70",
+        "id": "t2"
+      },
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "198.137.87.70",
+        "id": "t3"
+      }
+    ],
+    "health": {
+      "t2": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 145.0,
+            "na": 76.0,
+            "sa": 152.0,
+            "ca": 42.0,
+            "eu": 125.0
+          },
+          "last_ms": 145.0
+        },
+        "last_check": "2025-10-19T19:55:56Z",
+        "status": "healthy"
+      },
+      "t3": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 145.0,
+            "na": 55.0,
+            "sa": 163.0,
+            "ca": 104.0,
+            "eu": 149.0
+          },
+          "last_ms": 145.0
+        },
+        "last_check": "2025-10-19T19:55:58Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 149.0
+          },
+          "last_ms": 149.0
+        },
+        "last_check": "2025-10-19T19:55:14Z",
+        "status": "healthy"
+      },
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 145.0
+          },
+          "last_ms": 145.0
+        },
+        "last_check": "2025-10-19T19:55:58Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 55.0
+          },
+          "last_ms": 55.0
+        },
+        "last_check": "2025-10-19T19:55:00Z",
+        "status": "healthy"
+      },
+      "t1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 153.0,
+            "na": 37.0,
+            "sa": 179.0,
+            "ca": 95.0,
+            "eu": 80.0
+          },
+          "last_ms": 153.0
+        },
+        "last_check": "2025-10-19T19:55:55Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 163.0
+          },
+          "last_ms": 163.0
+        },
+        "last_check": "2025-10-19T19:55:29Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 104.0
+          },
+          "last_ms": 104.0
+        },
+        "last_check": "2025-10-19T19:55:43Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "simplee.com": {
+    "type": "single",
+    "ttl": 300,
+    "fqdn": "simplee.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.2",
+        "id": "t1"
+      }
+    ],
+    "health": {
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 127.0
+          },
+          "last_ms": 127.0
+        },
+        "last_check": "2025-10-19T19:55:59Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 72.0
+          },
+          "last_ms": 72.0
+        },
+        "last_check": "2025-10-19T19:55:01Z",
+        "status": "healthy"
+      },
+      "t1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 127.0,
+            "na": 72.0,
+            "sa": 112.0,
+            "ca": 60.0,
+            "eu": 80.0
+          },
+          "last_ms": 127.0
+        },
+        "last_check": "2025-10-19T19:55:59Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 112.0
+          },
+          "last_ms": 112.0
+        },
+        "last_check": "2025-10-19T19:55:30Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 60.0
+          },
+          "last_ms": 60.0
+        },
+        "last_check": "2025-10-19T19:55:45Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 80.0
+          },
+          "last_ms": 80.0
+        },
+        "last_check": "2025-10-19T19:55:16Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "single.example.com": {
+    "type": "single",
+    "ttl": 300,
+    "fqdn": "single.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.1",
+        "id": "single-1"
+      }
+    ],
+    "health": {
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 107.0
+          },
+          "last_ms": 107.0
+        },
+        "last_check": "2025-10-19T19:56:00Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 63.0
+          },
+          "last_ms": 63.0
+        },
+        "last_check": "2025-10-19T19:55:03Z",
+        "status": "healthy"
+      },
+      "single-1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 107.0,
+            "na": 63.0,
+            "sa": 176.0,
+            "ca": 53.0,
+            "eu": 71.0
+          },
+          "last_ms": 107.0
+        },
+        "last_check": "2025-10-19T19:56:00Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 176.0
+          },
+          "last_ms": 176.0
+        },
+        "last_check": "2025-10-19T19:55:31Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 53.0
+          },
+          "last_ms": 53.0
+        },
+        "last_check": "2025-10-19T19:55:46Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 71.0
+          },
+          "last_ms": 71.0
+        },
+        "last_check": "2025-10-19T19:55:17Z",
+        "status": "healthy"
+      }
+    }
+  },
+  "weight.example.com": {
+    "type": "single",
+    "ttl": 300,
+    "fqdn": "weight.example.com",
+    "targets": [
+      {
+        "geo_location": {
+          "region": "as",
+          "country": "JP"
+        },
+        "ip": "192.0.2.1",
+        "id": "weight-1"
+      }
+    ],
+    "health": {
+      "weight-1": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "sa": "healthy",
+          "ca": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 143.0,
+            "na": 25.0,
+            "sa": 143.0,
+            "ca": 64.0,
+            "eu": 71.0
+          },
+          "last_ms": 143.0
+        },
+        "last_check": "2025-10-19T19:56:02Z",
+        "status": "healthy"
+      },
+      "weight-3": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 186.0,
+            "na": 50.0,
+            "sa": 126.0,
+            "ca": 93.0,
+            "eu": 137.0
+          },
+          "last_ms": 137.0
+        },
+        "last_check": "2025-10-18T05:31:57Z",
+        "status": "healthy"
+      },
+      "eu": {
+        "rtt": {
+          "by_region": {
+            "eu": 71.0
+          },
+          "last_ms": 71.0
+        },
+        "last_check": "2025-10-19T19:55:18Z",
+        "status": "healthy"
+      },
+      "as": {
+        "rtt": {
+          "by_region": {
+            "as": 143.0
+          },
+          "last_ms": 143.0
+        },
+        "last_check": "2025-10-19T19:56:02Z",
+        "status": "healthy"
+      },
+      "na": {
+        "rtt": {
+          "by_region": {
+            "na": 25.0
+          },
+          "last_ms": 25.0
+        },
+        "last_check": "2025-10-19T19:55:04Z",
+        "status": "healthy"
+      },
+      "sa": {
+        "rtt": {
+          "by_region": {
+            "sa": 143.0
+          },
+          "last_ms": 143.0
+        },
+        "last_check": "2025-10-19T19:55:33Z",
+        "status": "healthy"
+      },
+      "ca": {
+        "rtt": {
+          "by_region": {
+            "ca": 64.0
+          },
+          "last_ms": 64.0
+        },
+        "last_check": "2025-10-19T19:55:47Z",
+        "status": "healthy"
+      },
+      "weight-2": {
+        "status_by_region": {
+          "as": "healthy",
+          "na": "healthy",
+          "ca": "healthy",
+          "sa": "healthy",
+          "eu": "healthy"
+        },
+        "rtt": {
+          "by_region": {
+            "as": 174.0,
+            "na": 72.0,
+            "sa": 140.0,
+            "ca": 79.0,
+            "eu": 74.0
+          },
+          "last_ms": 74.0
+        },
+        "last_check": "2025-10-18T05:31:56Z",
+        "status": "healthy"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Build artifacts
+*.egg-info/
+build/
+dist/
+
+# Logs
+*.log
+logs/
+*.tmp
+*.bak
+
+# === Node / Frontend ===
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+# === OS / IDE ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sln
+*.suo
+*.njsproj
+*.ntvs*
+*.user
+*.workspace
+
+# === Package locks ===
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === Docker / Terraform / Cache ===
+terraform/
+__pycache__/
+.cache/
